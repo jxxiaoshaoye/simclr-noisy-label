@@ -1,0 +1,133 @@
+{
+  "artifacts": [],
+  "command": "main",
+  "experiment": {
+    "base_dir": "/home/lyh/SimCLR",
+    "dependencies": [
+      "numpy==1.18.1",
+      "sacred==0.8.1"
+    ],
+    "mainfile": "experiment.py",
+    "name": "SimCLR",
+    "repositories": [
+      {
+        "commit": "bf9d50232888058e0d9ae7467ba149f165e569c9",
+        "dirty": true,
+        "url": "https://github.com/Spijkervet/SimCLR.git"
+      },
+      {
+        "commit": "bf9d50232888058e0d9ae7467ba149f165e569c9",
+        "dirty": true,
+        "url": "https://github.com/Spijkervet/SimCLR.git"
+      },
+      {
+        "commit": "bf9d50232888058e0d9ae7467ba149f165e569c9",
+        "dirty": true,
+        "url": "https://github.com/Spijkervet/SimCLR.git"
+      }
+    ],
+    "sources": [
+      [
+        "experiment.py",
+        "_sources/experiment_63a9e1c4cf64ac885d9f5d4e96573029.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___882e88766bebf8a0177d05f789fddcd2.py"
+      ],
+      [
+        "utils/yaml_config_hook.py",
+        "_sources/yaml_config_hook_b9c7ea7ead682d1e098863f17f255e09.py"
+      ]
+    ]
+  },
+  "heartbeat": "2020-06-11T15:08:22.273253",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Gold 6240 CPU @ 2.60GHz",
+    "gpus": {
+      "driver_version": "440.82",
+      "gpus": [
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        }
+      ]
+    },
+    "hostname": "zlab-8v100",
+    "os": [
+      "Linux",
+      "Linux-4.18.0-147.8.1.el8_1.x86_64-x86_64-with-glibc2.10"
+    ],
+    "python_version": "3.8.3"
+  },
+  "meta": {
+    "command": "main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2020-06-11T14:53:37.820918",
+  "status": "INTERRUPTED",
+  "stop_time": "2020-06-11T15:08:22.276315"
+}

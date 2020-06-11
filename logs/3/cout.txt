@@ -1,0 +1,285 @@
+INFO - SimCLR - Running command 'main'
+INFO - SimCLR - Started run with ID "3"
+**************************************************
+Namespace(batch_size=256, config_file='./config/config.yaml', dataset='CIFAR10', device=device(type='cuda', index=0), directory='pretrain', epoch_decay_start=10, epoch_num=100, epochs=100, exponent=2, forget_rate=0.9, fp16=False, fp16_opt_level='O2', logistic_batch_size=128, lr=0.001, model_path='9cnn/3', n_epoch=50, n_gpu=8, net='9cnn', noise_rate=0.9, noise_type='symmetric', normalize=True, num_gradual=10, num_iter_per_epoch=400, optimizer='LARS', out_dir='9cnn/3', pretrain=True, projection_dim=64, seed=42, start_epoch=0, temperature=0.5, weight_decay=1e-06, workers=16)
+Files already downloaded and verified
+Files already downloaded and verified
+SimCLR(
+  (encoder): CNN(
+    (c1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (c2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (c3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (c4): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (c5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (c6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (c7): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1))
+    (c8): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1))
+    (c9): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1))
+    (fc): Identity()
+    (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn8): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (bn9): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (projector): Sequential(
+    (0): Linear(in_features=128, out_features=128, bias=False)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=64, bias=False)
+  )
+) LARS (
+Parameter Group 0
+    classic_momentum: True
+    eeta: 0.001
+    exclude_from_layer_adaptation: None
+    exclude_from_weight_decay: ['batch_normalization', 'bias']
+    initial_lr: 0.3
+    lr: 0.3
+    momentum: 0.9
+    use_nesterov: False
+    weight_decay: 1e-06
+)
+Using 8's
+Step [0/195]	 Loss: 6.2313971519470215
+Step [50/195]	 Loss: 6.134754657745361
+Step [100/195]	 Loss: 6.003056526184082
+Step [150/195]	 Loss: 5.919116020202637
+Epoch [0/100]	 Loss: 5.9972151878552555	 lr: 0.3
+/opt/conda/conda-bld/pytorch_1587428207430/work/torch/csrc/utils/python_arg_parser.cpp:756: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha)
+Step [0/195]	 Loss: 5.815197467803955
+Step [50/195]	 Loss: 5.790774345397949
+Step [100/195]	 Loss: 5.750164985656738
+Step [150/195]	 Loss: 5.695893287658691
+Epoch [1/100]	 Loss: 5.752974400153527	 lr: 0.29993
+Step [0/195]	 Loss: 5.776717662811279
+Step [50/195]	 Loss: 5.669127941131592
+Step [100/195]	 Loss: 5.64292049407959
+Step [150/195]	 Loss: 5.668894290924072
+Epoch [2/100]	 Loss: 5.638907090211526	 lr: 0.2997
+Step [0/195]	 Loss: 5.610567569732666
+Step [50/195]	 Loss: 5.580745697021484
+Step [100/195]	 Loss: 5.561750411987305
+Step [150/195]	 Loss: 5.552431106567383
+Epoch [3/100]	 Loss: 5.559448053897955	 lr: 0.29933
+Step [0/195]	 Loss: 5.52092170715332
+Step [50/195]	 Loss: 5.486473560333252
+Step [100/195]	 Loss: 5.47144079208374
+Step [150/195]	 Loss: 5.583182334899902
+Epoch [4/100]	 Loss: 5.499631429329897	 lr: 0.29882
+Step [0/195]	 Loss: 5.534626007080078
+Step [50/195]	 Loss: 5.520687580108643
+Step [100/195]	 Loss: 5.530145168304443
+Step [150/195]	 Loss: 5.456121921539307
+Epoch [5/100]	 Loss: 5.453681835761437	 lr: 0.29815
+Step [0/195]	 Loss: 5.456123352050781
+Step [50/195]	 Loss: 5.401316165924072
+Step [100/195]	 Loss: 5.419543743133545
+Step [150/195]	 Loss: 5.364930629730225
+Epoch [6/100]	 Loss: 5.413238821274195	 lr: 0.29734
+Step [0/195]	 Loss: 5.381019592285156
+Step [50/195]	 Loss: 5.399023532867432
+Step [100/195]	 Loss: 5.377424716949463
+Step [150/195]	 Loss: 5.441756248474121
+Epoch [7/100]	 Loss: 5.382872601044483	 lr: 0.29639
+Step [0/195]	 Loss: 5.4029622077941895
+Step [50/195]	 Loss: 5.344797134399414
+Step [100/195]	 Loss: 5.3723578453063965
+Step [150/195]	 Loss: 5.29013729095459
+Epoch [8/100]	 Loss: 5.358090447156857	 lr: 0.29529
+Step [0/195]	 Loss: 5.364995002746582
+Step [50/195]	 Loss: 5.3234453201293945
+Step [100/195]	 Loss: 5.323573589324951
+Step [150/195]	 Loss: 5.3476080894470215
+Epoch [9/100]	 Loss: 5.332948577098358	 lr: 0.29404
+Step [0/195]	 Loss: 5.330294609069824
+Step [50/195]	 Loss: 5.339299201965332
+Step [100/195]	 Loss: 5.412830829620361
+Step [150/195]	 Loss: 5.30004358291626
+Epoch [10/100]	 Loss: 5.317727631788987	 lr: 0.29266
+Step [0/195]	 Loss: 5.267338275909424
+Step [50/195]	 Loss: 5.280544757843018
+Step [100/195]	 Loss: 5.3387675285339355
+Step [150/195]	 Loss: 5.3230156898498535
+Epoch [11/100]	 Loss: 5.301954423464261	 lr: 0.29113
+Step [0/195]	 Loss: 5.2824835777282715
+Step [50/195]	 Loss: 5.251108646392822
+Step [100/195]	 Loss: 5.250356197357178
+Step [150/195]	 Loss: 5.33263635635376
+Epoch [12/100]	 Loss: 5.2850450809185325	 lr: 0.28947
+Step [0/195]	 Loss: 5.252910614013672
+Step [50/195]	 Loss: 5.287281036376953
+Step [100/195]	 Loss: 5.2532477378845215
+Step [150/195]	 Loss: 5.2917962074279785
+Epoch [13/100]	 Loss: 5.271985521071996	 lr: 0.28766
+Step [0/195]	 Loss: 5.221202373504639
+Step [50/195]	 Loss: 5.259232997894287
+Step [100/195]	 Loss: 5.295716762542725
+Step [150/195]	 Loss: 5.282266616821289
+Epoch [14/100]	 Loss: 5.25831943658682	 lr: 0.28572
+Step [0/195]	 Loss: 5.226299285888672
+Step [50/195]	 Loss: 5.358789920806885
+Step [100/195]	 Loss: 5.2308855056762695
+Step [150/195]	 Loss: 5.235781192779541
+Epoch [15/100]	 Loss: 5.248915134332119	 lr: 0.28365
+Step [0/195]	 Loss: 5.249200820922852
+Step [50/195]	 Loss: 5.166255474090576
+Step [100/195]	 Loss: 5.245273113250732
+Step [150/195]	 Loss: 5.219229698181152
+Epoch [16/100]	 Loss: 5.23835715513963	 lr: 0.28145
+Step [0/195]	 Loss: 5.237072467803955
+Step [50/195]	 Loss: 5.2093048095703125
+Step [100/195]	 Loss: 5.1598711013793945
+Step [150/195]	 Loss: 5.224169731140137
+Epoch [17/100]	 Loss: 5.229145641815968	 lr: 0.27911
+Step [0/195]	 Loss: 5.250463485717773
+Step [50/195]	 Loss: 5.2044525146484375
+Step [100/195]	 Loss: 5.235782623291016
+Step [150/195]	 Loss: 5.1923441886901855
+Epoch [18/100]	 Loss: 5.2183312709514915	 lr: 0.27665
+Step [0/195]	 Loss: 5.25827169418335
+Step [50/195]	 Loss: 5.231328010559082
+Step [100/195]	 Loss: 5.1920905113220215
+Step [150/195]	 Loss: 5.25148868560791
+Epoch [19/100]	 Loss: 5.207932173900115	 lr: 0.27406
+Step [0/195]	 Loss: 5.204566955566406
+Step [50/195]	 Loss: 5.198553562164307
+Step [100/195]	 Loss: 5.120883941650391
+Step [150/195]	 Loss: 5.161619186401367
+Epoch [20/100]	 Loss: 5.198176271487505	 lr: 0.27135
+Step [0/195]	 Loss: 5.133263111114502
+Step [50/195]	 Loss: 5.154844284057617
+Step [100/195]	 Loss: 5.213230133056641
+Step [150/195]	 Loss: 5.182638645172119
+Epoch [21/100]	 Loss: 5.195083745320638	 lr: 0.26852
+Step [0/195]	 Loss: 5.162790298461914
+Step [50/195]	 Loss: 5.2286858558654785
+Step [100/195]	 Loss: 5.194709300994873
+Step [150/195]	 Loss: 5.155914306640625
+Epoch [22/100]	 Loss: 5.182724187312982	 lr: 0.26558
+Step [0/195]	 Loss: 5.1335649490356445
+Step [50/195]	 Loss: 5.205573081970215
+Step [100/195]	 Loss: 5.158130168914795
+Step [150/195]	 Loss: 5.135015964508057
+Epoch [23/100]	 Loss: 5.176186886811868	 lr: 0.26252
+Step [0/195]	 Loss: 5.1288886070251465
+Step [50/195]	 Loss: 5.138519763946533
+Step [100/195]	 Loss: 5.18858528137207
+Step [150/195]	 Loss: 5.131160259246826
+Epoch [24/100]	 Loss: 5.169461159828382	 lr: 0.25935
+Step [0/195]	 Loss: 5.1935811042785645
+Step [50/195]	 Loss: 5.119735240936279
+Step [100/195]	 Loss: 5.114199638366699
+Step [150/195]	 Loss: 5.183211803436279
+Epoch [25/100]	 Loss: 5.161599584726187	 lr: 0.25607
+Step [0/195]	 Loss: 5.185969829559326
+Step [50/195]	 Loss: 5.177734851837158
+Step [100/195]	 Loss: 5.132423400878906
+Step [150/195]	 Loss: 5.174009323120117
+Epoch [26/100]	 Loss: 5.159189490782909	 lr: 0.25268
+Step [0/195]	 Loss: 5.1501641273498535
+Step [50/195]	 Loss: 5.15640115737915
+Step [100/195]	 Loss: 5.185112476348877
+Step [150/195]	 Loss: 5.138774394989014
+Epoch [27/100]	 Loss: 5.15044676951873	 lr: 0.2492
+Step [0/195]	 Loss: 5.188378810882568
+Step [50/195]	 Loss: 5.125336170196533
+Step [100/195]	 Loss: 5.124919891357422
+Step [150/195]	 Loss: 5.169943332672119
+Epoch [28/100]	 Loss: 5.140707519726876	 lr: 0.24561
+Step [0/195]	 Loss: 5.139383792877197
+Step [50/195]	 Loss: 5.125289440155029
+Step [100/195]	 Loss: 5.161221027374268
+Step [150/195]	 Loss: 5.127809524536133
+Epoch [29/100]	 Loss: 5.1404007471524755	 lr: 0.24194
+Step [0/195]	 Loss: 5.059112548828125
+Step [50/195]	 Loss: 5.170788288116455
+Step [100/195]	 Loss: 5.104664325714111
+Step [150/195]	 Loss: 5.167479991912842
+Epoch [30/100]	 Loss: 5.134299830901317	 lr: 0.23817
+Step [0/195]	 Loss: 5.089838027954102
+Step [50/195]	 Loss: 5.155295372009277
+Step [100/195]	 Loss: 5.137707233428955
+Step [150/195]	 Loss: 5.083748817443848
+Epoch [31/100]	 Loss: 5.128410921341334	 lr: 0.23431
+Step [0/195]	 Loss: 5.131158828735352
+Step [50/195]	 Loss: 5.09708833694458
+Step [100/195]	 Loss: 5.062303066253662
+Step [150/195]	 Loss: 5.086065769195557
+Epoch [32/100]	 Loss: 5.124278432894975	 lr: 0.23037
+Step [0/195]	 Loss: 5.167663097381592
+Step [50/195]	 Loss: 5.085087299346924
+Step [100/195]	 Loss: 5.086566925048828
+Step [150/195]	 Loss: 5.086451053619385
+Epoch [33/100]	 Loss: 5.118948378929725	 lr: 0.22636
+Step [0/195]	 Loss: 5.117794990539551
+Step [50/195]	 Loss: 5.096715927124023
+Step [100/195]	 Loss: 5.139079570770264
+Step [150/195]	 Loss: 5.119583606719971
+Epoch [34/100]	 Loss: 5.112541416363839	 lr: 0.22226
+Step [0/195]	 Loss: 5.136374473571777
+Step [50/195]	 Loss: 5.126405715942383
+Step [100/195]	 Loss: 5.058007717132568
+Step [150/195]	 Loss: 5.11202335357666
+Epoch [35/100]	 Loss: 5.114869015033428	 lr: 0.2181
+Step [0/195]	 Loss: 5.135444641113281
+Step [50/195]	 Loss: 5.1385297775268555
+Step [100/195]	 Loss: 5.129792213439941
+Step [150/195]	 Loss: 5.11548376083374
+Epoch [36/100]	 Loss: 5.108697059826973	 lr: 0.21387
+Step [0/195]	 Loss: 5.167334079742432
+Step [50/195]	 Loss: 5.109870910644531
+Step [100/195]	 Loss: 5.082449913024902
+Step [150/195]	 Loss: 5.079094886779785
+Epoch [37/100]	 Loss: 5.106466462061955	 lr: 0.20957
+Step [0/195]	 Loss: 5.084775447845459
+Step [50/195]	 Loss: 5.037537097930908
+Step [100/195]	 Loss: 5.11032772064209
+Step [150/195]	 Loss: 5.099774360656738
+Epoch [38/100]	 Loss: 5.095741900419577	 lr: 0.20522
+Step [0/195]	 Loss: 5.098246097564697
+Step [50/195]	 Loss: 5.14952278137207
+Step [100/195]	 Loss: 5.063080310821533
+Step [150/195]	 Loss: 5.086070537567139
+Epoch [39/100]	 Loss: 5.09313036111685	 lr: 0.20081
+Step [0/195]	 Loss: 5.140208721160889
+Step [50/195]	 Loss: 5.080058574676514
+Step [100/195]	 Loss: 5.054344654083252
+Step [150/195]	 Loss: 5.12438440322876
+Epoch [40/100]	 Loss: 5.093377690437513	 lr: 0.19635
+Step [0/195]	 Loss: 5.093545913696289
+Step [50/195]	 Loss: 5.106651306152344
+Step [100/195]	 Loss: 5.067023754119873
+Step [150/195]	 Loss: 5.089316368103027
+Epoch [41/100]	 Loss: 5.091788262587327	 lr: 0.19185
+Step [0/195]	 Loss: 5.098774433135986
+Step [50/195]	 Loss: 5.090645790100098
+Step [100/195]	 Loss: 5.043338298797607
+Step [150/195]	 Loss: 5.062949180603027
+Epoch [42/100]	 Loss: 5.085050876323994	 lr: 0.1873
+Step [0/195]	 Loss: 5.050518035888672
+Step [50/195]	 Loss: 5.102980136871338
+Step [100/195]	 Loss: 5.105162620544434
+Step [150/195]	 Loss: 5.1195387840271
+Epoch [43/100]	 Loss: 5.085095024108886	 lr: 0.18272
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/home/lyh/.conda/envs/simclr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 238, in run
+    self._record_writer.write(data)
+  File "/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
+    self._writer.write(header + header_crc + data + footer_crc)
+  File "/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 535, in write
+    self.fs.append(self.filename, file_content, self.binary_mode)
+  File "/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 158, in append
+    self._write(filename, file_content, "ab" if binary_mode else "a")
+  File "/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 162, in _write
+    with io.open(filename, mode, encoding=encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: b'9cnn/3/SimCLR/events.out.tfevents.1591888122.zlab-8v100.36485.0'

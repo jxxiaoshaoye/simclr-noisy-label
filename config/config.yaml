@@ -1,0 +1,39 @@
+# train options
+seed: 42 # sacred handles automatic seeding when passed in the config
+batch_size: 256
+workers: 16
+start_epoch: 0
+epochs: 100
+dataset: "CIFAR10" # STL10,CIFAR100
+pretrain: True 
+
+# model options
+net: "9cnn" # 9cnn,resnet18,resnet50
+normalize: True
+projection_dim: 64 # "[...] to project the representation to a 128-dimensional latent space"
+
+# loss options
+optimizer: "LARS" #  LARS or Adam(experimental)
+weight_decay: 1.0e-6 # "optimized using LARS [...] and weight decay of 10?"
+temperature: 0.5 # see appendix B.7.: Optimal temperature under different batch sizes
+
+# reload options
+model_path: "9cnn/2" # set to the directory containing `checkpoint_##.tar` 
+epoch_num: 100 # set to checkpoint number
+
+# mixed-precision training
+fp16: False 
+fp16_opt_level: "O2"
+
+
+# coteaching config 
+logistic_batch_size: 128
+n_epoch: 150
+noise_rate: 0.9
+noise_type: 'symmetric' #[pairflip, symmetric]
+forget_rate: 0.9
+exponent: 2 #exponent of the forget rate, can be 0.5, 1, 2. This parameter is equal to c in Tc for R(T) in Co-teaching paper
+num_gradual: 10 #how many epochs for linear drop rate, can be 5, 10, 15. This parameter is equal to Tk for R(T) in Co-teaching paper.
+lr: 0.001
+epoch_decay_start: 10
+num_iter_per_epoch: 400

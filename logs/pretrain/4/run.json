@@ -1,0 +1,143 @@
+{
+  "artifacts": [],
+  "command": "main",
+  "experiment": {
+    "base_dir": "/home/lyh/SimCLR",
+    "dependencies": [
+      "numpy==1.18.1",
+      "sacred==0.8.1"
+    ],
+    "mainfile": "experiment.py",
+    "name": "SimCLR",
+    "repositories": [
+      {
+        "commit": "bf9d50232888058e0d9ae7467ba149f165e569c9",
+        "dirty": true,
+        "url": "https://github.com/Spijkervet/SimCLR.git"
+      },
+      {
+        "commit": "bf9d50232888058e0d9ae7467ba149f165e569c9",
+        "dirty": true,
+        "url": "https://github.com/Spijkervet/SimCLR.git"
+      },
+      {
+        "commit": "bf9d50232888058e0d9ae7467ba149f165e569c9",
+        "dirty": true,
+        "url": "https://github.com/Spijkervet/SimCLR.git"
+      }
+    ],
+    "sources": [
+      [
+        "experiment.py",
+        "_sources/experiment_63a9e1c4cf64ac885d9f5d4e96573029.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___882e88766bebf8a0177d05f789fddcd2.py"
+      ],
+      [
+        "utils/yaml_config_hook.py",
+        "_sources/yaml_config_hook_b9c7ea7ead682d1e098863f17f255e09.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"testrepresentation.py\", line 166, in main\n    simclr_model, _, _ = load_model(args, train_loader, reload_model=True)\n",
+    "  File \"/home/lyh/SimCLR/model.py\", line 14, in load_model\n    model.load_state_dict(torch.load(model_fp, map_location=args.device.type))\n",
+    "  File \"/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/torch/serialization.py\", line 584, in load\n    with _open_file_like(f, 'rb') as opened_file:\n",
+    "  File \"/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/torch/serialization.py\", line 234, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n",
+    "  File \"/home/lyh/.conda/envs/simclr/lib/python3.8/site-packages/torch/serialization.py\", line 215, in __init__\n    super(_open_file, self).__init__(open(name, mode))\n",
+    "FileNotFoundError: [Errno 2] No such file or directory: '9cnn/3/checkpoint_100.tar'\n"
+  ],
+  "heartbeat": "2020-06-11T15:09:30.627830",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Gold 6240 CPU @ 2.60GHz",
+    "gpus": {
+      "driver_version": "440.82",
+      "gpus": [
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        },
+        {
+          "model": "Tesla V100-SXM2-16GB",
+          "persistence_mode": false,
+          "total_memory": 16160
+        }
+      ]
+    },
+    "hostname": "zlab-8v100",
+    "os": [
+      "Linux",
+      "Linux-4.18.0-147.8.1.el8_1.x86_64-x86_64-with-glibc2.10"
+    ],
+    "python_version": "3.8.3"
+  },
+  "meta": {
+    "command": "main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2020-06-11T15:09:28.546749",
+  "status": "FAILED",
+  "stop_time": "2020-06-11T15:09:30.629924"
+}
