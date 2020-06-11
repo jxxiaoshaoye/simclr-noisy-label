@@ -1,5 +1,5 @@
 # simclr-noisy-label
-simclr:
+##simclr:
 
 git clone https://github.com/spijkervet/SimCLR.git && cd SimCLR
 
@@ -19,7 +19,7 @@ python testrepresentation.py
 
 python phase2.py
 
-co-teaching:
+##co-teaching:
 
 python -m testing.logistic_regression with dataset=CIFAR10 model_path=. 
 
