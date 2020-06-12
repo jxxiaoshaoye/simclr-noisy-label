@@ -77,7 +77,7 @@ def main(_run, _log):
     args = argparse.Namespace(**_run.config)
     args = post_config_hook(args, _run)
 
-    args.device = torch.device("cuda:7" )
+    args.device = torch.device("cuda:0" )
     
     # with torch.autograd.set_detect_anomaly(True):
     root = "./datasets"
@@ -142,12 +142,12 @@ def main(_run, _log):
             args, train_loader, simclr_model, criterion, optimizer
         )
         print(
-            f"Epoch [{epoch}/{args.logistic_epochs}]\t Loss: {loss_epoch / len(train_loader)}\t Accuracy: {accuracy_epoch / len(train_loader)}"
+            f"Epoch [{epoch}/{args.n_epoch}]\t Loss: {loss_epoch / len(train_loader)}\t Accuracy: {accuracy_epoch / len(train_loader)}"
         )
 
     # final testing
     loss_epoch, accuracy_epoch = test(
-        args, arr_test_loader, simclr_model, criterion, optimizer
+        args, test_loader, simclr_model, criterion, optimizer
     )
     print(
         f"[FINAL]\t Loss: {loss_epoch / len(test_loader)}\t Accuracy: {accuracy_epoch / len(test_loader)}"

@@ -60,7 +60,7 @@ def train(args, train_loader, model, criterion, optimizer, writer):
 def main(_run, _log):
     args = argparse.Namespace(**_run.config)
     args = post_config_hook(args, _run)
-    args.out_dir=str(args.net)+'/2'
+    args.out_dir='output/'+str(args.net)+'/2'
     args.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     args.n_gpu = torch.cuda.device_count()
     print('*'*50)
@@ -113,7 +113,8 @@ def main(_run, _log):
 
 
     tb_dir = os.path.join(args.out_dir, _run.experiment_info["name"])
-    os.makedirs(tb_dir)
+    if not os.path.exists(tb_dir):
+        os.makedirs(tb_dir)
     writer = SummaryWriter(log_dir=tb_dir)
 
     criterion = NT_Xent(args.batch_size, args.temperature, args.device)

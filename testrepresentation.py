@@ -114,7 +114,7 @@ def main(_run, _log):
     args = argparse.Namespace(**_run.config)
     args = post_config_hook(args, _run)
 
-    args.device = torch.device("cuda:7" if torch.cuda.is_available() else "cpu")
+    args.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     root = "./datasets"
 
