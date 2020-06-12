@@ -1,8 +1,6 @@
 # simclr-noisy-label
 **simclr:**
 
-git clone https://github.com/spijkervet/SimCLR.git && cd SimCLR
-
 wget https://github.com/Spijkervet/SimCLR/releases/download/1.2/checkpoint_100.tar   #这个是resnet50的
 
 sh setup.sh || python3 -m pip install -r requirements.txt 
